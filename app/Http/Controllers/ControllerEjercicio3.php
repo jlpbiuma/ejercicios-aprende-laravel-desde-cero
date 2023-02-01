@@ -8,7 +8,7 @@ class ControllerEjercicio3 extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function index()
     {
@@ -18,7 +18,7 @@ class ControllerEjercicio3 extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function create()
     {
@@ -27,27 +27,24 @@ class ControllerEjercicio3 extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * 
+     * 
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:64'],
-            'description' => ['required', 'string', 'max:512'],
-            'price' => ['required', 'numeric', 'min:0'],
-            'has_battery' => ['required', 'boolean'],
-            'battery_duration' => ['required_if:has_battery,true', 'numeric', 'min:0'],
-            'color' => ['required', 'array'],
-            'dimensions' 
+        // Desde la función store se crea un nuevo objeto de tipo Contact
+        // y se le asignan los valores de los campos del formulario
+        // También se aplica el Schema para validar!!!!
 
-        ]);
-        return response($request->all(), 201);
+        return response("Contact created");
     }
 
     /**
      * Display the specified resource.
      *
-     *
-     * @return \Illuminate\Http\Response
+     * 
+     * 
      */
     public function show()
     {
@@ -58,7 +55,7 @@ class ControllerEjercicio3 extends Controller
      * Show the form for editing the specified resource.
      *
      * 
-     * @return \Illuminate\Http\Response
+     * 
      */
     public function edit()
     {
@@ -68,9 +65,9 @@ class ControllerEjercicio3 extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
+     * 
+     * 
+     * 
      */
     public function update()
     {
@@ -80,8 +77,8 @@ class ControllerEjercicio3 extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Contact  $contact
-     * @return \Illuminate\Http\Response
+     * 
+     * 
      */
     public function destroy()
     {
