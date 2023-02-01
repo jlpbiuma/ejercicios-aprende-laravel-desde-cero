@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ControllerEjercicio3;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -75,3 +75,6 @@ Route::post('/ejercicio2/c', function (Request $request) {
     $product['discount'] = $discount * 100;
     return Response::json($product);
 });
+
+Route::get('/ejercicio3', [ControllerEjercicio3::class, 'create']);
+Route::post('/ejercicio3', [ControllerEjercicio3::class, 'store']);
