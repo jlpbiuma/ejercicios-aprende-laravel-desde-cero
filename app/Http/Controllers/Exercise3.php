@@ -20,11 +20,11 @@ class Exercise3 extends Controller
             'colors' => 'required|array',
             'dimensions' => 'required|array',
             'dimensions.*' => 'required|numeric|min:0',
-            'accesories' => 'required|array',
-            'accesories.*' => 'required|array',
-            'accesories.*.name' => 'required|string',
-            'accesories.*.price' => 'required|numeric|min:0'
+            'accessories' => 'required|array',
+            'accessories.*' => 'required|array',
+            'accessories.*.name' => 'required|string',
+            'accessories.*.price' => 'required|numeric|min:0'
         ]);
-        return response("OK");
+        return "OK";
     }
 }
