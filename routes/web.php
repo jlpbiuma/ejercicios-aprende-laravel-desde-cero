@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Exercise3;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,7 +77,9 @@ Route::post('/ejercicio2/c', function (Request $request) {
     return Response::json($product);
 });
 
-
+/*
 Route::get('/ejercicio3', [Exercise3::class, 'create']);
 Route::post('/ejercicio3', [Exercise3::class, 'store']);
+*/
+Route::post('/ejercicio3', Exercise3::class);
 
