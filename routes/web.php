@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControllerEjercicio3;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -16,11 +17,11 @@ use App\Http\Controllers\Exercise3;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+
 // Ejercicio 1
 
 Route::get('/ejercicio1', function () {
@@ -77,9 +78,6 @@ Route::post('/ejercicio2/c', function (Request $request) {
     return Response::json($product);
 });
 
-/*
 Route::get('/ejercicio3', [Exercise3::class, 'create']);
 Route::post('/ejercicio3', [Exercise3::class, 'store']);
-*/
-Route::post('/ejercicio3', Exercise3::class);
 

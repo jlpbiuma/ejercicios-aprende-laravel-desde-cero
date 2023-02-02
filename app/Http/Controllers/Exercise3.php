@@ -25,6 +25,6 @@ class Exercise3 extends Controller
             'accesories.*.name' => 'required|string',
             'accesories.*.price' => 'required|numeric|min:0'
         ]);
-        return "OK";
+        return response("OK");
     }
 }
