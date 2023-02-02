@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ControllerEjercicio3;
+use App\Http\Controllers\Ejercicio3;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +78,4 @@ Route::post('/ejercicio2/c', function (Request $request) {
     return Response::json($product);
 });
 
-Route::get('/ejercicio3', [Exercise3::class, 'create']);
-Route::post('/ejercicio3', [Exercise3::class, 'store']);
-
+Route::resource('/ejercicio3', Ejercicio3::class);
